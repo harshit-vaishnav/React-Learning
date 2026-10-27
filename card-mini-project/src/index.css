@@ -1,0 +1,175 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+.parent {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px 30px;
+  align-content: start;
+}
+
+.card {
+  width: 100%;
+  min-height: 350px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Top Section */
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.top button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  color: #555;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.top button svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Center Section */
+
+.center {
+  margin-top: 20px;
+}
+
+.center h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+.center h2 span {
+  font-size: 11px;
+  color: #999;
+  font-weight: 400;
+}
+
+.center h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-top: 7px;
+}
+
+.center > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.center > div h2 {
+  background-color: #eee;
+  color: #444;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 9px;
+  border-radius: 6px;
+}
+
+/* Bottom Section */
+
+.bottom {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.bottom h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111;
+}
+
+.bottom p {
+  font-size: 11px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.bottom button {
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.bottom button:hover {
+  background-color: #333;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+  .parent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 25px;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .parent {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .card {
+    min-height: 330px;
+  }
+}
+
